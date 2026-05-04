@@ -12,7 +12,7 @@
 #include "keymap_features/behaviors.dtsi"
 #include "keymap_features/combos.dtsi"
 #ifndef KEYMAP_DRAWER
-#include "keys_de.h"
+#include "keymaps/keys_de.h"
 #endif
 
 
