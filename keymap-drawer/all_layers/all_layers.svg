@@ -210,7 +210,7 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(722, 48)" class="key keypos-6">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap">Y</text>
+<text x="0" y="0" class="key tap">Z</text>
 </g>
 <g transform="translate(798, 48)" class="key keypos-7">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -298,7 +298,7 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(114, 218)" class="key keypos-25">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap">Z</text>
+<text x="0" y="0" class="key tap">Y</text>
 </g>
 <g transform="translate(190, 200)" class="key keypos-26">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -727,8 +727,8 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 </g>
 </g>
-<g transform="translate(30, 1294)" class="layer-Sym">
-<text x="0" y="28" class="label" id="Sym">Sym:</text>
+<g transform="translate(30, 1294)" class="layer-Sym (DE)">
+<text x="0" y="28" class="label" id="Sym-DE">Sym (DE):</text>
 <g transform="translate(0, 56)">
 <g transform="translate(38, 66)" class="key keypos-0">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -874,7 +874,9 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(1026, 218)" class="key keypos-34">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap">@</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.75em">AGr+</tspan><tspan x="0" dy="1.5em">Q</tspan>
+</text>
 </g>
 <g transform="translate(1102, 218)" class="key keypos-35">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -901,8 +903,8 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 </g>
 </g>
-<g transform="translate(30, 1726)" class="layer-Game">
-<text x="0" y="28" class="label" id="Game">Game:</text>
+<g transform="translate(30, 1726)" class="layer-Game (QWERTZ)">
+<text x="0" y="28" class="label" id="Game-QWERTZ">Game (QWERTZ):</text>
 <g transform="translate(0, 56)">
 <g transform="translate(38, 66)" class="key keypos-0">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
@@ -999,7 +1001,7 @@ text.br  { font-family: "JetBrainsMono Nerd Font"; fill: var(--all-corner); font
 </g>
 <g transform="translate(190, 200)" class="key keypos-26">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
-<text x="0" y="0" class="key tap">Y</text>
+<text x="0" y="0" class="key tap">Z</text>
 </g>
 <g transform="translate(266, 190)" class="key keypos-27">
 <rect rx="6" ry="6" x="-36" y="-36" width="72" height="72" class="key"/>
