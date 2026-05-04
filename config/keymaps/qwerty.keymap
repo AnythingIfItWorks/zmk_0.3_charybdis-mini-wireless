@@ -13,39 +13,16 @@
 #include "keymap_features/combos.dtsi"
 
 / {
-/* --- KEYMAP CONFIG --- */
-// ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    00     01     02     03    04      05        06     07     08     09     10     11
-// ├──────┼──────┼──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    12     13     14     15    16      17        18     19     20     21     22     23
-// ├──────┼──────┼──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    24     25     26     27    28      29        30     31     32     33     34     35
-// ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
-//                         36     37     38        39     40
-//                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
-// #define BASE    0
-// #define NUM     1
-// #define NAV     2
-// #define SYM     3
-// #define GAME    4
-// #define EXTRAS  5
-// #define SLOW    6
-// #define SCROLL  7
-
     keymap {
         compatible = "zmk,keymap";
+
         BASE {
             display-name = "Base";
             bindings = <
-// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
-    &kp C_AC_SEARCH  &kp Q            &kp W            &kp E             &kp R             &kp T    &kp Y   &kp U              &kp I              &kp O             &kp P           &td_layers
-// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &kp C_AC_SEARCH  &kp Q            &kp W            &kp E             &kp R             &kp T    &kp Z   &kp U              &kp I              &kp O             &kp P           &td_layers
     &kp TAB          &ht_left_tp LCMD A  &ht_left LALT S  &ht_left LSHFT D  &ht_left LCTRL F  &kp G    &kp H   &ht_right RCTRL J  &ht_right RSHFT K   &ht_right_tp LALT L  &ht_right_tp RCMD SEMICOLON   &kp DEL
-// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
-    &clip_hist       &kp Z            &kp X            &kp C             &kp V             &kp B    &kp N   &kp M              &mm_cm_sc          &mm_pr_col        &mm_qm_ex          &kp FSLH
-// ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
+    &clip_hist       &kp Y            &kp X            &kp C             &kp V             &kp B    &kp N   &kp M              &mm_cm_sc          &mm_pr_col        &mm_qm_ex          &kp FSLH
                                                              &td_esc_scrl_slow   &td_clk  &td_bs     &kp ENTER  &td_space_nav
-                                                         // ╰──────────────────┴─────────┴──────╯  ╰──────────┴──────────────╯
             >;
         };
 
@@ -70,21 +47,21 @@
         };
 
         SYM {
-            display-name = "Sym";
+            display-name = "Sym (DE)";
             bindings = <
-&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above      &kp AMPS   &kp PLUS     &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
-&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line       &kp GRAVE  &kp KP_MINUS &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
-&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below      &code_blk  &kp EQUAL    &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
+&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above      &kp AMPS   &kp PLUS     &kp LBKT      &kp RBKT      &kp PRCNT  &kp BSLH
+&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line       &kp GRAVE  &kp KP_MINUS &kp LPAR      &kp RPAR      &kp ASTRK  &kp PIPE
+&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below      &code_blk  &kp EQUAL    &kp LBRC      &kp RBRC      &kp RA(Q)  &kp FSLH
                                        &none  &trans     &trans            &trans   &trans
             >;
         };
 
         GAME {
-            display-name = "Game";
+            display-name = "Game (QWERTZ)";
             bindings = <
 &kp N1  &kp TAB    &kp Q  &kp W   &kp E      &kp R           &none  &none  &none  &none  &none  &trans
 &kp N2  &kp LCTRL  &kp A  &kp S   &kp D      &kp F           &none  &none  &none  &none  &none  &none
-&kp N3  &kp LSHFT  &kp Y  &kp X   &kp C      &kp V           &none  &none  &none  &none  &none  &none
+&kp N3  &kp LSHFT  &kp Z  &kp X   &kp C      &kp V           &none  &none  &none  &none  &none  &none
                           &none   &kp SPACE  &kp LEFT_ALT    &none  &none
             >;
         };
@@ -102,30 +79,20 @@
         SLOW {
             display-name = "Slow";
             bindings = <
-// ╭────────┬────────┬────────┬────────┬────────┬────────╮  ╭────────┬────────┬────────┬────────┬────────┬────────╮
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ├────────┼────────┼────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ├────────┼────────┼────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ╰────────┴────────┴────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┴────────┴────────┴────────╯
-                                  &trans   &trans   &trans      &trans   &trans
-                             // ╰────────┴────────┴────────╯  ╰────────┴────────╯
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+                          &trans &trans &trans      &trans &trans
             >;
         };
 
         SCROLL {
             display-name = "Scroll";
             bindings = <
-// ╭────────┬────────┬────────┬────────┬────────┬────────╮  ╭────────┬────────┬────────┬────────┬────────┬────────╮
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ├────────┼────────┼────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ├────────┼────────┼────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &trans    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-// ╰────────┴────────┴────────┼────────┼────────┼────────┤  ├────────┼────────┼────────┴────────┴────────┴────────╯
-                                  &trans   &trans   &trans      &trans   &trans
-                             // ╰────────┴────────┴────────╯  ╰────────┴────────╯
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+                          &trans &trans &trans      &trans &trans
             >;
         };
     };
