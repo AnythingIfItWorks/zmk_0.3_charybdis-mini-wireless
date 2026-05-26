@@ -32,7 +32,7 @@
         };
 
         combo_BASE_or_EXTRAS {
-            bindings = <&kp T> //<&td_bore>;
+            bindings = <&kp T>; //<&td_bore>;
             key-positions = <38 39>;
         };
         
